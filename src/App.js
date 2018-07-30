@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from './jglogo.svg';
+import styles from './App.scss';
+console.log(styles);
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className={styles.app}>
+        <div className={styles.header}>
+          <img src={logo} className={styles.logo} alt="logo" />
+          <h2>Congrats, you now have Sass &amp; CSS Modules in your React project!</h2>
+        </div>
       </div>
     );
   }
