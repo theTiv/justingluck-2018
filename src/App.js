@@ -9,7 +9,7 @@ class App extends Component {
       <div className={styles.app}>
         <div className={styles.header}>
           <img src={logo} className={styles.logo} alt="logo" />
-          <h2>Congrats, you now have Sass &amp; CSS Modules in your React project!</h2>
+          <h2>Front End Developer</h2>
         </div>
       </div>
     );

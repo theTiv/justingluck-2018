@@ -4,7 +4,7 @@
 
 .logo {
   animation: App-logo-spin infinite 2s linear;
-  height: 50px;
+  height: 60px;
   padding-top: 80px;
 }
 
@@ -14,6 +14,12 @@
   height: 300px;
   padding: 20px;
   color: #58595b;
+  h2 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #999;
+  }
 }
 
 // @keyframes App-logo-spin {
