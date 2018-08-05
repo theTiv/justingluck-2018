@@ -9,7 +9,7 @@ const navBar = (props) => (
     <header className={classes.NavBar}>
         <MenuToggle clicked={props.menuToggleClicked} />
         <div className={classes.Logo}>
-            <Logo />
+            <Logo link="/home" />
         </div>
         <nav className={classes.DesktopOnly}>
             <NavigationItems />
