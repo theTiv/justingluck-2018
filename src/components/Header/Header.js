@@ -1,12 +1,12 @@
 import React from 'react';
 
-import classes from './NavBar.scss';
-import Logo from '../../Logo/Logo';
-import NavigationItems from '../NavigationItems/NavigationItems';
-import MenuToggle from '../MobileMenu/MenuToggle/MenuToggle';
+import classes from './Header.scss';
+import Logo from '../Logo/Logo';
+import NavigationItems from '../Navigation/NavigationItems/NavigationItems';
+import MenuToggle from '../Navigation/MobileMenu/MenuToggle/MenuToggle';
 
 const navBar = (props) => (
-    <header className={classes.NavBar}>
+    <header className={classes.Header}>
         <MenuToggle clicked={props.menuToggleClicked} />
         <div className={classes.Logo}>
             <Logo link="/home" />

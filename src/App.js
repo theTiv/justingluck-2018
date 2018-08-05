@@ -7,11 +7,12 @@ import Work from './containers/Work/Work';
 import Experience from './containers/Experience/Experience';
 import Contact from './containers/Contact/Contact';
 import Home from './containers/Home/Home';
+import Aux from '../src/hoc/Aux/Aux';
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <Aux>
         <Layout>
           <Switch>
             <Route path="/about" component={About} />
@@ -22,7 +23,7 @@ class App extends Component {
             <Route path="/" component={Home} />
           </Switch>
         </Layout>
-      </div>
+      </Aux>
     );
   }
 }

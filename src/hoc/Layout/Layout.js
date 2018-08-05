@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 
 import classes from './Layout.scss';
-import NavBar from '../../components/Navigation/NavBar/NavBar';
+import Header from '../../components/Header/Header';
 import MobileMenu from '../../components/Navigation/MobileMenu/MobileMenu';
 import Footer from '../../components/Footer/Footer';
+import Aux from '../Aux/Aux';
 
 class Layout extends Component {
 
@@ -26,16 +27,16 @@ class Layout extends Component {
 
     render() {
         return (
-            <div className={classes.Container}>
-                <NavBar className={classes.Header} menuToggleClicked={this.mobileMenuToggleHandler} />
-                <MobileMenu 
-                    open={this.state.showMobileMenu} 
-                    closed={this.mobileMenuClosedHandler} />
-                <main className={classes.Content}>
-                    {this.props.children}
-                </main>
-                <Footer className={classes.Footer} />
-            </div>           
+                <Aux>
+                    <Header className={classes.Header} menuToggleClicked={this.mobileMenuToggleHandler} />
+                    <MobileMenu 
+                        open={this.state.showMobileMenu} 
+                        closed={this.mobileMenuClosedHandler} />
+                    <main className={classes.Content}>
+                        {this.props.children}
+                    </main>
+                    <Footer className={classes.Footer} />
+                </Aux>
         )
     }
 }
