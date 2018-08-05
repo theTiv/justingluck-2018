@@ -6,7 +6,7 @@ import NavigationItems from '../NavigationItems/NavigationItems';
 import MenuToggle from '../MobileMenu/MenuToggle/MenuToggle';
 
 const navBar = (props) => (
-    <header className={classes.Toolbar}>
+    <header className={classes.NavBar}>
         <MenuToggle clicked={props.menuToggleClicked} />
         <div className={classes.Logo}>
             <Logo />

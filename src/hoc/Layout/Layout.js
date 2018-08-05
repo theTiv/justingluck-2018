@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import Aux from '../Aux/Aux';
 import classes from './Layout.scss';
 import NavBar from '../../components/Navigation/NavBar/NavBar';
 import MobileMenu from '../../components/Navigation/MobileMenu/MobileMenu';
+import Footer from '../../components/Footer/Footer';
 
 class Layout extends Component {
 
@@ -26,15 +26,16 @@ class Layout extends Component {
 
     render() {
         return (
-            <Aux>
-            <NavBar menuToggleClicked={this.mobileMenuToggleHandler} />
-            <MobileMenu 
-                open={this.state.showMobileMenu} 
-                closed={this.mobileMenuClosedHandler} />
-            <main className={classes.Content}>
-                {this.props.children}
-            </main>
-        </Aux>           
+            <div className={classes.Container}>
+                <NavBar className={classes.Header} menuToggleClicked={this.mobileMenuToggleHandler} />
+                <MobileMenu 
+                    open={this.state.showMobileMenu} 
+                    closed={this.mobileMenuClosedHandler} />
+                <main className={classes.Content}>
+                    {this.props.children}
+                </main>
+                <Footer className={classes.Footer} />
+            </div>           
         )
     }
 }
