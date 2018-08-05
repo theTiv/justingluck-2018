@@ -1,16 +1,27 @@
 import React, { Component } from 'react';
-import logo from './jglogo.svg';
-import styles from './App.scss';
-console.log(styles);
+import { Route, Switch } from 'react-router-dom';
+import Layout from './hoc/Layout/Layout';
+import About from './containers/About/About';
+import Project from './containers/Project/Project';
+import Work from './containers/Work/Work';
+import Experience from './containers/Experience/Experience';
+import Contact from './containers/Contact/Contact';
+import Home from './containers/Home/Home';
 
 class App extends Component {
   render() {
     return (
-      <div className={styles.app}>
-        <div className={styles.header}>
-          <img src={logo} className={styles.logo} alt="logo" />
-          <h2>Front End Developer</h2>
-        </div>
+      <div>
+        <Layout>
+          <Switch>
+            <Route path="/about" component={About} />
+            <Route path="/work/:projectTitle" component={Project} />
+            <Route path="/work" component={Work} />
+            <Route path="/experience" component={Experience} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/" component={Home} />
+          </Switch>
+        </Layout>
       </div>
     );
   }
