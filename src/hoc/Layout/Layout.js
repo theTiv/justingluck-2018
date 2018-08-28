@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Headroom from  'react-headroom';
 
 import classes from './Layout.scss';
 import Header from '../../components/Header/Header';
@@ -28,7 +29,12 @@ class Layout extends Component {
     render() {
         return (
                 <Aux>
-                    <Header className={classes.Header} menuToggleClicked={this.mobileMenuToggleHandler} />
+                    <Headroom 
+                        style={{
+                            height: '56px',
+                        }}>
+                        <Header className={classes.Header} menuToggleClicked={this.mobileMenuToggleHandler} />
+                    </Headroom>
                     <MobileMenu 
                         open={this.state.showMobileMenu} 
                         closed={this.mobileMenuClosedHandler} />

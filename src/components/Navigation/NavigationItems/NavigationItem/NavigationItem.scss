@@ -4,13 +4,14 @@
     display: block;
     width: 100%;
     a {
-      color: #8F5C2C;
+      color: #8e8e8e;
+      font-size: 14px;
       text-decoration: none;
       height: 100%;
       box-sizing: border-box;
       display: block;
       &:hover, &:active, &.active {
-        color: #4084C8;
+        color: #bfdcf9;
       }
     }
   }
@@ -23,15 +24,19 @@
       width: auto;
       align-items: center;
       a {
-        color: white;
+        color: #8e8e8e;
         text-decoration: none;
         height: 100%;
         padding: 16px 10px;
         border-bottom: 4px solid transparent;
-        &:hover, &:active, &.active {
-          background-color: #8F5C2C;
-          border-bottom: 4px solid #4084C8;
-          color: white;
+        &:hover, &:active {
+          background-color: #FFF;
+          border-bottom: 2px solid #bfdcf9;;
+          color: #8e8e8e;
+          transition: border-bottom 1s;
+        }
+        &.active {
+          color: #4a4a4a;
         }
       }
     }

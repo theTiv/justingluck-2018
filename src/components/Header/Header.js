@@ -1,7 +1,7 @@
 import React from 'react';
 
 import classes from './Header.scss';
-import Logo from '../Logo/Logo';
+import Logo from '../UI/Logo/Logo';
 import NavigationItems from '../Navigation/NavigationItems/NavigationItems';
 import MenuToggle from '../Navigation/MobileMenu/MenuToggle/MenuToggle';
 
